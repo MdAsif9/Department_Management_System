@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Login Page</title>
+        <style>
+            form {
+                margin: 50px auto;
+                width: 300px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="text"], input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                margin-bottom: 20px;
+            }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            .error {
+                color: red;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f2f2f2;
+            }
+
+            .container {
+                max-width: 500px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px #888888;
+            }
+
+            .header {
+                display: flex;
+                align-items: center;
+            }
+
+            .logo {
+                height: 50px;
+                margin-right: 10px;
+            }
+
+            h1 {
+                margin: 0;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+            }
+
+            label {
+                margin-bottom: 5px;
+            }
+
+            input {
+                padding: 10px;
+                margin-bottom: 10px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #888888;
+            }
+
+            select {
+                padding: 10px;
+                margin-bottom: 10px;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px #888888;
+            }
+
+            button {
+                padding: 10px;
+                margin-top: 10px;
+                background-color: #4CAF50;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #3e8e41;
+            }
+
+            #error-message {
+                color: #ff0000;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+
+        </style>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <img src="./images/manuuLogo1.png" alt="Logo" class="logo">
+
+                <h2> Login Page</h2>
+            </div>
+            <form action="LoginServlet" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="usertype">User Type:</label>
+                <select id="usertype" name="usertype" required>
+                    <option value="">Select user type</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="admin">Admin</option>
+                </select>
+                <button type="submit">Log In</button>
+                <p id="error-message"></p>
+            </form>
+        </div>
+    </body>
+</html>
